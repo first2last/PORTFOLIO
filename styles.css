@@ -1,0 +1,242 @@
+/* General Styles */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    /* Ensure video doesn't get cut off */
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    /* Stay in the background */
+}
+
+header,
+.hero-section,
+footer {
+    z-index: 1;
+    /* Ensure these elements are on top */
+}
+
+main {
+    flex: 1;
+}
+
+/* Navigation Bar */
+header {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-items a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    /* Smaller text size */
+    font-variant: small-caps;
+    /* Small caps variant */
+    padding: 10px 20px;
+}
+
+.nav-items a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background: black;
+    /* Ensuring a dark background for the glow effect */
+    flex-wrap: wrap;
+    /* Allow wrapping to avoid overflow */
+    
+    background: linear-gradient(90deg, #a0c4ff, #ff77b6); /* Light blue to pink gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+        0 0 5px rgba(0, 255, 255, 0.7),  /* Light cyan glow */
+        0 0 10px rgba(0, 255, 255, 0.6), /* Mid light cyan glow */
+        0 0 20px rgba(255, 105, 180, 0.5), /* Soft pink glow */
+        0 0 30px rgba(255, 105, 180, 0.4), /* Mid soft pink glow */
+        0 0 40px rgba(255, 255, 255, 0.3); /* White outer glow */
+}
+
+.figcaption {
+    color: white;
+}
+
+.my-image {
+    flex: 1;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.my-image img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.my-image figcaption {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Typing Effect */
+.my-intro {
+    flex: 2;
+    max-width: 600px;
+    /* Limit max-width to prevent overflow */
+    font-size: 25px;
+    line-height: 1.5;
+    padding: 20px;
+    /* Add padding to create space */
+    margin: 0 auto;
+    /* Center the intro */
+    white-space: normal;
+    /* Allow wrapping to prevent overflow */
+    word-wrap: break-word;
+    /* Ensure words break appropriately */
+    overflow: hidden;
+    border-right: 3px solid;
+    /* Cursor effect */
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Fading In Effect */
+.fade-in {
+    animation: fadeIn 3s ease-out;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.copyright {
+    font-size: 16px;
+    margin-left: 6px;
+}
+
+.social-media {
+    display: flex;
+    gap: 20px;
+}
+
+.social-media a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #aaa;
+    border: solid white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 20px;
+        /* Reduce padding for smaller screens */
+        text-align: center;
+    }
+
+    .my-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .my-intro {
+        max-width: 100%;
+        /* Let intro text take the full width */
+        padding: 10px;
+        /* Reduce padding for smaller screens */
+        white-space: normal;
+        /* Allow text to wrap */
+        word-wrap: break-word;
+        /* Break long words */
+        border-right: none;
+        /* Remove cursor effect on small screens */
+        animation: none;
+        /* Disable animation on mobile */
+    }
+
+    .footer-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-media {
+        margin-top: 15px;
+        justify-content: center;
+    }
+}
