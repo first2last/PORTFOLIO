@@ -1,0 +1,215 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Video Background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Header Styles */
+header {
+    padding: 10px 0;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-items .nav-Home, .nav-items .nav-about {
+    display: flex;
+    align-items: center;
+}
+
+.nav-items a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-variant: small-caps;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-items i {
+    margin-right: 8px;
+}
+
+.nav-items a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Gradient and Neon Glow Text */
+.gradient-text {
+    background: linear-gradient(90deg, #E0FFFF, #FFDEE9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+        0 0 5px rgba(224, 255, 255, 0.9),
+        0 0 10px rgba(224, 255, 255, 0.8),
+        0 0 20px rgba(255, 222, 233, 0.6),
+        0 0 30px rgba(255, 255, 255, 0.7),
+        0 0 40px rgba(255, 255, 255, 0.9);
+}
+
+/* Main Section */
+main {
+    flex: 1; /* Ensures the main section takes available space */
+    overflow: auto; /* Allows scrolling if content overflows */
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.8); /* Slightly transparent background */
+    border-radius: 10px;
+}
+
+.project {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-image {
+    flex: 1;
+    text-align: right;
+    max-width: 300px; /* Adjust max-width for image size */
+    margin-right: 20px; /* Adds space between image and text */
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.project-image img:hover {
+    transform: scale(1.2);
+    filter: brightness(110%);
+}
+
+.project-description {
+    flex: 2;
+    max-width: calc(100% - 320px); /* Adjust to ensure text area fills remaining space */
+    font-size: 16px;
+    line-height: 1.5;
+    color: white;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6); /* Slightly transparent background for better readability */
+    border-radius: 10px;
+}
+
+/* Apply gradient and neon glow text to headers and links */
+
+.project-description p
+{
+   /* Apply gradient and neon glow effect to these elements */
+background: linear-gradient(90deg, #a0c4ff, #ff77b6); /* Light blue to pink gradient */
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-shadow:
+    0 0 5px rgba(0, 255, 255, 0.7),  /* Light cyan glow */
+    0 0 10px rgba(0, 255, 255, 0.6), /* Mid light cyan glow */
+    0 0 20px rgba(255, 105, 180, 0.5), /* Soft pink glow */
+    0 0 30px rgba(255, 105, 180, 0.4), /* Mid soft pink glow */
+    0 0 40px rgba(255, 255, 255, 0.3); /* White outer glow */
+
+}
+
+.project-description h2  {
+    margin-top: 0;
+    color: white;
+    font-variant: small-caps;
+    font-style: italic;
+    font-size: xx-large;
+}
+
+h1{
+    margin-top: 0;
+    color: white;
+    font-variant: small-caps;
+    font-style:oblique;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.project-description p {
+    margin-bottom: 20px;
+}
+
+.project-description a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color:cornflowerblue;
+    border: 2px solid #00f;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-description a:hover {
+    background-color: #fff;
+    color: #00f;
+    box-shadow: 0 0 8px rgba(0, 0, 255, 0.5);
+}
+
+/* Footer Styles */
+footer {
+    padding: 10px 0;
+   
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.footer-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-items .social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.social-media a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #00f;
+}
+
+.footer-items .copyright p {
+    margin: 0;
+    color: white;
+}
