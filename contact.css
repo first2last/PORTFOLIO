@@ -1,5 +1,5 @@
-html,
-body {
+/* General Styles */
+html, body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -23,7 +23,6 @@ body {
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-    /* Stay in the background */
 }
 
 /* Header Styles */
@@ -54,7 +53,7 @@ header {
 
 /* Contact Section */
 main {
-    flex-grow: 1; /* Allow main content to fill available space */
+    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,9 +89,8 @@ main {
 
 /* Footer Section */
 footer {
-    margin-top: auto; /* Push footer to the bottom */
+    margin-top: auto;
     padding: 10px 0;
-    
 }
 
 .footer-items {
@@ -111,10 +109,8 @@ footer {
     color: white;
     font-size: 24px;
     text-decoration: none;
-    font-size:medium;
+    font-size: medium;
 }
-
-
 
 .footer-items .copyright p {
     margin: 0;
@@ -122,8 +118,64 @@ footer {
     font-size: medium;
 }
 
-
 .social-media a:hover {
     color: #aaa;
     border: solid white;
+}
+
+/* Responsive Design for Smaller Devices */
+@media (max-width: 768px) {
+    .contact-info h1 {
+        font-size: 3rem;
+    }
+
+    .contact-details p {
+        font-size: 1.4rem;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-items a {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    footer .footer-items {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-items .social-media a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-details p {
+        font-size: 1.2rem;
+    }
+
+    .nav-items {
+        gap: 5px;
+    }
+
+    .nav-items a {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    footer .footer-items {
+        padding: 10px;
+    }
+
+    .footer-items .social-media a {
+        font-size: 18px;
+    }
 }
