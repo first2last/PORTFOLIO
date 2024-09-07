@@ -97,41 +97,22 @@ header {
     color: #E0FFFF; /* Light Cyan for dark background */
 }
 
-.gradient-text {
-    background: linear-gradient(90deg, #E0FFFF, #FFDEE9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow:
-        0 0 5px rgba(224, 255, 255, 0.9),
-        0 0 10px rgba(224, 255, 255, 0.8),
-        0 0 20px rgba(255, 222, 233, 0.6),
-        0 0 30px rgba(255, 255, 255, 0.7),
-        0 0 40px rgba(255, 255, 255, 0.9);
-}
+
 
 p
  {
     text-align: center;
-    background: linear-gradient(90deg, #a0c4ff, #ff77b6);
+    background: black;
+    background: linear-gradient(90deg, #edfad8, #fce4ec);
     /* Light blue to pink gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow:
-        0 0 5px rgba(0, 255, 255, 0.7),
-        /* Light cyan glow */
-        0 0 10px rgba(0, 255, 255, 0.6),
-        /* Mid light cyan glow */
-        0 0 20px rgba(255, 105, 180, 0.5),
-        /* Soft pink glow */
-        0 0 30px rgba(255, 105, 180, 0.4),
-        /* Mid soft pink glow */
-        0 0 40px rgba(255, 255, 255, 0.3);
-    /* White outer glow */
+ 
 }
 
 h1 , h2 , h3 , h4 , h5 {
     text-align: center;
-    color: white;
+    color:yellow;
     font-variant: small-caps;
     font-style: italic;
     font-size: xx-large;
@@ -167,6 +148,7 @@ footer {
     color: white;
     font-size: 24px;
     text-decoration: none;
+    font-size:medium;
 }
 
 .social-media a:hover {
@@ -176,4 +158,5 @@ footer {
 .footer-items .copyright p {
     margin: 0;
     color: white;
+    font-size: medium;
 }
