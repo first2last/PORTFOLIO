@@ -124,21 +124,17 @@ main {
     border-radius: 10px;
 }
 
-/* Apply gradient and neon glow text to headers and links */
-
-.project-description p
-{
-   /* Apply gradient and neon glow effect to these elements */
-background: linear-gradient(90deg, #a0c4ff, #ff77b6); /* Light blue to pink gradient */
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-text-shadow:
-    0 0 5px rgba(0, 255, 255, 0.7),  /* Light cyan glow */
-    0 0 10px rgba(0, 255, 255, 0.6), /* Mid light cyan glow */
-    0 0 20px rgba(255, 105, 180, 0.5), /* Soft pink glow */
-    0 0 30px rgba(255, 105, 180, 0.4), /* Mid soft pink glow */
-    0 0 40px rgba(255, 255, 255, 0.3); /* White outer glow */
-
+/* Apply gradient and neon glow effect to paragraphs in project descriptions */
+.project-description p {
+    background: linear-gradient(90deg, #a0c4ff, #ff77b6); /* Light blue to pink gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+        0 0 5px rgba(0, 255, 255, 0.7),  /* Light cyan glow */
+        0 0 10px rgba(0, 255, 255, 0.6), /* Mid light cyan glow */
+        0 0 20px rgba(255, 105, 180, 0.5), /* Soft pink glow */
+        0 0 30px rgba(255, 105, 180, 0.4), /* Mid soft pink glow */
+        0 0 40px rgba(255, 255, 255, 0.3); /* White outer glow */
 }
 
 .project-description h2  {
@@ -153,7 +149,7 @@ h1{
     margin-top: 0;
     color: white;
     font-variant: small-caps;
-    font-style:oblique;
+    font-style: oblique;
     font-size: xx-large;
     text-align: center;
 }
@@ -166,7 +162,7 @@ h1{
     display: inline-block;
     padding: 10px 20px;
     color: #fff;
-    background-color:cornflowerblue;
+    background-color: cornflowerblue;
     border: 2px solid #00f;
     text-decoration: none;
     font-weight: bold;
@@ -183,7 +179,6 @@ h1{
 /* Footer Styles */
 footer {
     padding: 10px 0;
-   
     margin-top: auto; /* Push footer to the bottom */
 }
 
@@ -212,4 +207,125 @@ footer {
 .footer-items .copyright p {
     margin: 0;
     color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Navigation Bar Adjustments */
+    .nav-items {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-items a {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    /* Hero Section Adjustments */
+    .hero-section {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .my-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .my-image img {
+        max-width: 60%; /* Adjust image size for smaller screens */
+    }
+
+    .my-intro {
+        max-width: 100%;
+        padding: 10px;
+        white-space: normal;
+        word-wrap: break-word;
+        border-right: none;
+        animation: none;
+    }
+
+    /* Projects Section Adjustments */
+    .projects-section {
+        padding: 20px;
+    }
+
+    .project {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+        gap: 15px;
+    }
+
+    .project-image {
+        text-align: center;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .project-description {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .project-description h2 {
+        font-size: x-large; /* Adjust header size */
+    }
+
+    .project-description p {
+        font-size: 18px; /* Adjust paragraph font size */
+    }
+
+    .project-description a {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Gradient Text Adjustments */
+    .gradient-text {
+        font-size: 1.2em; /* Adjust font size if necessary */
+    }
+
+    /* Footer Adjustments */
+    .footer-items {
+        flex-direction: column;
+        align-items: center;
+        font-size: small;
+    }
+
+    .social-media {
+        margin-top: 15px;
+        justify-content: center;
+        font-size: small;
+    }
+
+    .social-media a {
+        font-size: 20px; /* Adjust icon size */
+    }
+
+    /* Heading and Paragraph Adjustments */
+    h1, h2, h3, h4, h5 {
+        font-size: large; /* Adjust heading sizes */
+        margin-bottom: 30px; /* Reduce margins */
+    }
+
+    p {
+        font-size: 18px; /* Reduce paragraph font size */
+        padding: 0 10px; /* Add padding to prevent text from touching screen edges */
+    }
+
+    /* Additional Elements if present */
+    /* Ensure any other sections or elements are adjusted similarly */
+}
+
+/* Additional Styles for figcaption outside media queries */
+.my-image figcaption {
+    margin-top: 10px;
+    font-size: large;
+    font-variant: small-caps;
+    font-weight: bold;
+    color: yellow;
 }
