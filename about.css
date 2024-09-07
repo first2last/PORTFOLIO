@@ -160,3 +160,63 @@ footer {
     color: white;
     font-size: medium;
 }
+
+/* Media Query for Small Devices */
+@media (max-width: 768px) {
+    .nav-items {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-items a {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .proficiency {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .language img {
+        width: 60px; /* Reduce image size for smaller screens */
+    }
+
+    .language span {
+        font-size: 14px; /* Reduce font size */
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-size: large; /* Adjust heading size for smaller devices */
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: 18px; /* Reduce paragraph size */
+        padding: 0 10px; /* Add padding to avoid text hitting screen edges */
+    }
+
+    footer {
+        padding: 5px 0;
+    }
+
+    .footer-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-items .social-media {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .footer-items .copyright {
+        margin-top: 10px;
+    }
+}
+
