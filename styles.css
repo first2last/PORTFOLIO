@@ -14,9 +14,9 @@ body {
     min-height: 100vh;
     position: relative;
     overflow: hidden;
-    /* Ensure video doesn't get cut off */
 }
 
+/* Video Background */
 .video-background {
     position: fixed;
     top: 0;
@@ -25,18 +25,6 @@ body {
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-    /* Stay in the background */
-}
-
-header,
-.hero-section,
-footer {
-    z-index: 1;
-    /* Ensure these elements are on top */
-}
-
-main {
-    flex: 1;
 }
 
 /* Navigation Bar */
@@ -55,9 +43,7 @@ header {
     color: white;
     text-decoration: none;
     font-size: 16px;
-    /* Smaller text size */
     font-variant: small-caps;
-    /* Small caps variant */
     padding: 10px 20px;
 }
 
@@ -72,26 +58,13 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 40px;
-
-    /* Ensuring a dark background for the glow effect */
     flex-wrap: wrap;
-    /* Allow wrapping to avoid overflow */
 }
 
 .hero-section p {
-    background: black;
     background: linear-gradient(90deg, #edfad8, #fce4ec);
-    /* Light blue to pink gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
-}
-
-
-.figcaption {
-    color:  yellow;
-    font-weight: bolder;
-    font-size: xx-large;
 }
 
 .my-image {
@@ -105,51 +78,41 @@ header {
     height: auto;
     border-radius: 50%;
     opacity: 0.8;
-
-    /* Fixing the rounding issue */
 }
 
+.figcaption {
+    color: yellow;
+    font-weight: bolder;
+    font-size: xx-large;
+}
 
-
-/* Typing Effect */
 .my-intro {
     flex: 2;
     max-width: 600px;
-    /* Limit max-width to prevent overflow */
     font-size: 25px;
     line-height: 1.5;
     padding: 20px;
-    /* Add padding to create space */
     margin: 0 auto;
-    /* Center the intro */
     white-space: normal;
-    /* Allow wrapping to prevent overflow */
     word-wrap: break-word;
-    /* Ensure words break appropriately */
     overflow: hidden;
     border-right: 3px solid;
-
 }
-
-
 
 @keyframes typing {
     from {
         width: 0;
     }
-
     to {
         width: 100%;
     }
 }
 
 @keyframes blink-caret {
-
     from,
     to {
         border-color: transparent;
     }
-
     50% {
         border-color: black;
     }
@@ -159,18 +122,15 @@ header {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
 }
 
-
+/* Footer */
 footer {
     padding: 10px 0;
-    
     margin-top: auto;
-    /* Push footer to the bottom */
 }
 
 .footer-items {
@@ -189,10 +149,11 @@ footer {
     color: white;
     font-size: 24px;
     text-decoration: none;
-    font-size:medium;
 }
 
-
+.social-media a:hover {
+    color: #aaa;
+}
 
 .footer-items .copyright p {
     margin: 0;
@@ -200,18 +161,11 @@ footer {
     font-size: medium;
 }
 
-
-.social-media a:hover {
-    color: #aaa;
-    border: solid white;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-section {
         flex-direction: column;
         padding: 20px;
-        /* Reduce padding for smaller screens */
         text-align: center;
     }
 
@@ -222,24 +176,17 @@ footer {
 
     .my-intro {
         max-width: 100%;
-        /* Let intro text take the full width */
         padding: 10px;
-        /* Reduce padding for smaller screens */
         white-space: normal;
-        /* Allow text to wrap */
         word-wrap: break-word;
-        /* Break long words */
         border-right: none;
-        /* Remove cursor effect on small screens */
         animation: none;
-        /* Disable animation on mobile */
     }
 
     .footer-items {
         flex-direction: column;
         align-items: center;
         font-size: small;
-        
     }
 
     .social-media {
@@ -249,15 +196,10 @@ footer {
     }
 }
 
-
-
 .my-image figcaption {
     margin-top: 10px;
-    font-size: xx-large;
-    /* Ensure the font size is noticeable */
+    font-size: large;
     font-variant: small-caps;
-    /* Apply small-caps */
     font-weight: bold;
     color: yellow;
-    /* Ensure the color is white-ish and visible */
 }
